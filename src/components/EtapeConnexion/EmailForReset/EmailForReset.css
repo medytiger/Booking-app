@@ -1,0 +1,15 @@
+.back {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: var(--border-color);
+    display: flex;
+    padding: .5rem;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+}
+
+.back:hover {
+    color: var(--white);
+    background-color: var(--secondary-color);
+}

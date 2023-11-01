@@ -1,0 +1,14 @@
+.felicitation {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.felicitation img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

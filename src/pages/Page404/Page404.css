@@ -1,0 +1,19 @@
+.pageIntrouvable {
+    font-family: 'Michroma', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: var(--black);
+    color: var(--white);
+    height: 100vh;
+}
+
+.pageIntrouvable h1 {
+    font-size: 8rem;
+}
+
+.pageIntrouvable .inverted {
+    margin-top: 3rem;
+}

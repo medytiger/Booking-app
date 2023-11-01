@@ -1,0 +1,910 @@
+.comptePage {
+    margin-top: 6rem;
+    text-align: justify;
+}
+
+.compteContainer {
+    margin: 2rem 0;
+}
+
+.compteContainer p {
+    margin: 2rem 0;
+    font-size: 1.1rem;
+}
+
+.compteContent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    gap: 2rem;
+}
+
+.compteSide {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    position: sticky;
+    top: 6rem;
+}
+
+.compteSide .supprimer {
+    padding: .5rem 1rem;
+    border: 0;
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.compteItem {
+    width: 50%;
+    margin: 1rem 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    z-index: 988;
+}
+
+.compteItem .items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.compteItem .item {
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    max-height: 500px;
+    padding: 1rem;
+}
+
+.compteItem .maReservation {
+    max-height: inherit;
+    height: fit-content;
+}
+
+.compteItem .item .reservation {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.compteItem .item .reservationCard {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding: 0;
+}
+
+.compteItem .item .reservationContainer .img {
+    height: 100px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.compteItem .item .reservationContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.compteItem .item .reservationCard .reservationInfos {
+    height: auto;
+    width: calc(100% - 110px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 .5rem .5rem 0;
+}
+
+.compteItem .item .reservationCard .reservationInfos .titre,
+.compteItem .item .reservationCard .reservationInfos .ville {
+    width: 100%;
+    height: 25px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.compteItem .item .reservationCard .reservationInfos .prix {
+    display: flex;
+    height: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: .2rem 2rem;
+    background-color: var(--background);
+    color: var(--white);
+    border-radius: 20px;
+}
+
+.compteItem .item .reservationContent {
+    position: relative;
+}
+
+.compteItem .item .annulerMaReservation {
+    position: absolute;
+    right: 0;
+    border: none;
+    border-radius: 20px;
+    right: 1rem;
+    top: .5rem;
+    padding: 0.3rem 0.5rem;
+    color: var(--white);
+    background-color: var(--secondary-color);
+    font-size: 10px;
+    cursor: pointer;
+    z-index: 99999999999999;
+}
+
+.compteItem .one .userProduct {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.compteItem .userProduct .produitLength,
+.compteItem .userProduct .reservationLength {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background-color: var(--border-color);
+}
+
+.compteItem .userProduct .produitLength span,
+.compteItem .userProduct .reservationLength span {
+    font-size: 1rem;
+    color: var(--background);
+}
+
+.two {
+    border: 1px solid var(--border-color);
+    width: 60%;
+    background-color: var(--border-color);
+}
+
+.two .statistiques {
+    font-size: 1.1rem;
+    background-color: var(--white);
+    width: 100%;
+    padding: .7rem;
+    margin-top: 1rem;
+}
+
+.sideHead,
+.sideOutlet {
+    padding: 1rem;
+    width: 100%;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.sideHead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.sideHead img {
+    height: 60px;
+    width: 60px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background-color: var(--border-color);
+}
+
+.userInfos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.userInfos h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 180px;
+    max-height: 30px;
+}
+
+.userInfos span {
+    font-size: var(--petite-police);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 180px;
+    max-height: 23px;
+}
+
+.userInfos .link {
+    color: var(--secondary-color);
+    margin: .5rem 0;
+}
+
+.compteMain {
+    flex: 1;
+    margin-top: 1rem;
+}
+
+.favories {
+    flex: 1;
+    max-height: 700px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    padding-bottom: 3rem;
+    overflow: hidden;
+}
+
+.favories button {
+    border: 0;
+    height: 70px;
+    width: 100%;
+    right: 0;
+    left: 0;
+    padding: .5rem;
+    bottom: 0;
+    border-radius: 0;
+    background-color: var(--white);
+    position: absolute;
+}
+
+.homeliked {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 0;
+}
+
+.homeliked .homelikedImg {
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeliked .homelikedImg img {
+    height: 100%;
+    width: inherit;
+    object-fit: cover;
+}
+
+.homeliked .favorieTitre {
+    font-size: .8rem;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    max-height: 23px;
+    color: var(--black);
+}
+
+.homeliked .favoriePrix {
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.allFavories {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 2rem 20rem;
+    backdrop-filter: blur(10px);
+    overflow-y: scroll;
+    background-color: var(--white);
+}
+
+.allFavories span {
+    position: absolute;
+    right: 200px;
+    z-index: 999;
+    background-color: var(--secondary-color);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.allFavories .favories {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    background-color: var(--white);
+    overflow-y: scroll;
+}
+
+.allFavories .homeliked {
+    height: 200px;
+    width: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
+}
+
+.allFavories .homeliked .homelikedImg {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.allFavories .homeliked .homelikedImg img {
+    height: 100%;
+    width: 100%;
+    width: inherit;
+    object-fit: cover;
+}
+
+.sideOutlet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sideOutletMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sideOutletMenu ion-icon {
+    font-size: 1.3rem;
+    display: none;
+}
+
+.sideOutlet .outfitLink {
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: .5rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    font-size: var(--police-moyenne);
+    font-weight: 300;
+}
+
+.dashbord {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: .5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    font-size: var(--police-moyenne);
+    font-weight: 300;
+}
+
+.add:active {
+    transition: .3s ease-in;
+    transform: scale(.9);
+}
+
+.addForm {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    display: none;
+    background-color: var(--border-color);
+    backdrop-filter: blur(200px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.barreContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 15rem 1.5rem 0;
+}
+
+.barre {
+    border-radius: 15px;
+    height: 8px;
+    width: 40%;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.barrePourcentage {
+    background-color: var(--secondary-color);
+    height: 100%;
+    transition: .8s ease-in-out;
+}
+
+.etapeZero {
+    width: 0;
+}
+
+.etapeUn {
+    width: 12.5%;
+}
+
+.etapeDeux {
+    width: 25%;
+}
+
+.etapeTrois {
+    width: 37.5%;
+}
+
+.etapeQuatre {
+    width: 50%;
+}
+
+.etapeCinq {
+    width: 62.5%;
+}
+
+.etapeSix {
+    width: 75%;
+}
+
+.etapeSept {
+    width: 87.5%;
+}
+
+.etapeHuite {
+    width: 100%;
+}
+
+.activeAddForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.formContainer {
+    height: 75%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-color: var(--white);
+    transition: opacity .8s ease-in-out;
+}
+
+.addFormLeftBox,
+.addFormRightBox {
+    height: 100%;
+    position: relative;
+    transition: .8s ease-in-out;
+}
+
+.addFormLeftBox {
+    background: url(../../assets/backgroundImage.jpg)no-repeat center center;
+    background-size: cover;
+    object-fit: cover;
+    padding: 2rem;
+    width: 40%;
+    transition: opacity .8s ease-in-out;
+}
+
+.addTexte,
+.addFormLeftBox p {
+    position: relative;
+    z-index: 5;
+    color: var(--white);
+    transition: opacity .8s ease-in-out;
+}
+
+.addTexte {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.25rem;
+    text-align: justify;
+    margin-top: 2rem;
+}
+
+.addFormLeftBox::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(39, 39, 39, 0.395);
+    backdrop-filter: blur(150px);
+    z-index: 1;
+}
+
+.addFormRightBox {
+    background-color: var(--white);
+    width: 60%;
+    transition: .8s ease-in-out;
+    border-radius: 0 15px 15px 0;
+}
+
+.addformContent {
+    height: 85%;
+    padding: .5rem 2rem 2rem 0;
+    transition: .8s ease-in-out;
+}
+
+.addFormControl {
+    height: 15%;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    padding: 0 2rem;
+    transition: .8s ease-in-out;
+    background-color: var(--white);
+}
+
+.addFormControl .desabled {
+    display: none;
+}
+
+.retour,
+.suivant,
+.publier {
+    position: absolute;
+}
+
+.suivant,
+.publier {
+    right: 2rem;
+}
+
+.addModalCloseBtn {
+    position: absolute;
+    right: 0;
+    top: -4rem;
+    border: 0;
+    padding: .5rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.addModalCloseBtn ion-icon {
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1025px) {
+    .sideHead {
+        overflow: hidden;
+        gap: 1rem;
+    }
+    .compteMain {
+        padding: 0;
+    }
+    .compteItem .item .reservationCard {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0;
+        position: relative;
+        padding: 0;
+    }
+    .compteItem .item .reservationContainer .img {
+        width: 40%;
+    }
+    .compteItem .item .reservationCard .reservationInfos {
+        height: 100%;
+        width: 60%;
+        padding: .5rem;
+    }
+    .favories .homeliked {
+        padding: 0;
+    }
+    .favories .homeliked .homelikedImg {
+        width: 100%;
+        height: 100px;
+    }
+    .allFavories {
+        padding: 2rem 5rem;
+    }
+    .allFavories span {
+        position: absolute;
+        right: 90px;
+    }
+    .userInfos h2 {
+        font-size: 13px;
+        width: 120px;
+    }
+    .userInfos span {
+        font-size: 13px;
+        width: 120px;
+    }
+    .compteItem .bottom {
+        flex-wrap: wrap;
+    }
+    .compteItem .top .item {
+        width: 80%;
+    }
+    .compteItem .bottom .item {
+        width: 80%;
+        height: 400px;
+        max-height: 500px;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .compteContent {
+        gap: 1rem;
+        flex-wrap: wrap;
+        /* justify-content: flex-end; */
+    }
+    .compteSide {
+        left: 0;
+        width: 35%;
+    }
+    .compteMain {
+        width: calc(65% - 1rem);
+        padding: 0;
+    }
+    .compteItem .item .reservationCard {
+        width: 100%;
+    }
+    .compteItem .item .reservationContainer .img {
+        width: 100%;
+    }
+    .compteItem .item .reservationCard .reservationInfos {
+        height: 100%;
+        width: 100%;
+        padding: .5rem;
+    }
+    .compteItem .item .reservationCard .reservationInfos .prix {
+        height: 25px;
+        padding: .2rem .5rem;
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .userInfos span {
+        width: 150px;
+    }
+    .compteItem {
+        width: calc(65% - 1rem);
+        padding: 0;
+        height: auto;
+    }
+    .compteItem .item {
+        width: 100%;
+    }
+    .favories {
+        flex: initial;
+        width: calc(65% - 1rem);
+        position: relative;
+        left: calc(35% + 1rem);
+    }
+    .allFavories {
+        padding: 2rem 3rem;
+    }
+    .allFavories .favories {
+        left: 0;
+    }
+    .addForm {
+        padding: 2rem;
+    }
+    .activeAddForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    .barre {
+        left: 2rem;
+        width: 80%;
+    }
+    .formContainer {
+        height: auto;
+        flex-direction: column;
+    }
+    .addFormLeftBox {
+        height: auto;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .addFormRightBox {
+        width: 100%;
+        border-radius: 0;
+    }
+    .addformContent {
+        height: auto;
+        padding: 0;
+    }
+    .addFormControl {
+        height: auto;
+        border-radius: 15px;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        top: -2rem;
+        width: 100%;
+        transition: .8s ease-in-out;
+        padding: 3rem 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .comptePage {
+        margin-top: 4rem;
+    }
+    .compteMain {
+        width: 100%;
+        /* margin-top: 2rem; */
+    }
+    .compteContent {
+        flex-direction: column;
+    }
+    .compteSide {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+    .sideOutlet {
+        height: 50px;
+        overflow: hidden;
+        justify-content: flex-start;
+        transition: all .4s ease-in;
+    }
+    .sideOutletMenu ion-icon {
+        display: flex;
+    }
+    .compteSide .resizeMenu {
+        transition: all .4s ease-in;
+        height: auto;
+    }
+    .compteItem {
+        width: 100%;
+        padding: 0;
+    }
+    .compteItem .top .item {
+        width: 100%;
+    }
+    .compteItem .bottom .item {
+        width: 100%;
+        box-shadow: none;
+    }
+    .compteItem .item {
+        width: 100%;
+    }
+    .compteItem .item .reservation {
+        padding: 0;
+        width: 100%;
+        display: flex;
+    }
+    .compteItem .item .reservation:first-child {
+        margin-top: 1rem;
+    }
+    .compteItem .item .reservationCard {
+        height: auto;
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .compteItem .item .reservationCard .annulerMaReservation {
+        top: 1rem;
+    }
+    .compteItem .item .reservationCard .reservationInfos .titre,
+    .compteItem .item .reservationCard .reservationInfos .ville,
+    .compteItem .item .reservationCard .reservationInfos .prix {
+        width: 100%;
+        height: 25px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: 600;
+    }
+    .favories {
+        width: 100%;
+        left: 0;
+    }
+    .allFavories {
+        padding: 0;
+        display: flex;
+    }
+    .allFavories .favories {
+        margin-top: 3rem;
+        height: auto;
+    }
+    .allFavories .homeliked {
+        height: auto;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .allFavories .homeliked .homelikedImg {
+        width: 100%;
+        height: 250px;
+    }
+    .allFavories .homeliked .homeLikedInfos {
+        width: 100%;
+        height: 50px;
+    }
+    .allFavories span {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+    .barreContainer {
+        display: none;
+    }
+    .addForm {
+        padding: 0;
+    }
+    .addFormLeftBox {
+        padding: 3rem 1rem 1rem 1rem;
+    }
+    .addModalCloseBtn {
+        right: .5rem;
+        top: .5rem;
+        z-index: 9999;
+        padding: .5rem;
+    }
+    .retour {
+        left: 1rem;
+    }
+    .suivant,
+    .publier {
+        right: 1rem;
+    }
+}

@@ -1,0 +1,21 @@
+.reservations li {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    height: 85px;
+    padding: .5rem;
+    overflow: hidden;
+    background-color: var(--border-color);
+}
+
+.reservations li img {
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+}
+
+.reservationInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

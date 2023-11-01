@@ -1,0 +1,32 @@
+.quatriemeEtape {
+    height: 100%;
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
+.quatriemeEtape .selectContainer {
+    margin: 1rem 0 2rem 0;
+    padding: 0;
+}
+
+.quatriemeEtape h3 {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 769px) {
+    .quatriemeEtape {
+        height: auto;
+        padding: 0 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .quatriemeEtape {
+        padding: 0 1rem;
+    }
+    .quatriemeEtape .selectContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

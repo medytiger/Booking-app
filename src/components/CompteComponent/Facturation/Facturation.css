@@ -1,0 +1,33 @@
+.facturation {
+    padding: 0rem 0 1rem 0rem;
+    background-color: var(--white);
+    min-height: 100vh;
+}
+
+.factureContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* margin-top: 2rem; */
+}
+
+.factureContainer h2 {
+    margin-top: 3rem;
+}
+
+.factureContainer p {
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 769px) {
+    .facturation {
+        padding: 1rem 0 0 1rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .facturation {
+        padding: 0;
+    }
+}

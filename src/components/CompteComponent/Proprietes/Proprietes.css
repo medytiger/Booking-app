@@ -1,0 +1,95 @@
+.proprietes {
+    padding: 0rem 0 1rem 0rem;
+}
+
+.proprietesContainer {
+    margin: 3rem 0 4rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem 1rem;
+}
+
+.proprietesContainer .card {
+    height: fit-content;
+    position: relative;
+}
+
+.proprietesContainer .card button {
+    position: absolute;
+    border: none;
+    padding: .3rem 1rem;
+    width: 100px;
+    z-index: 10;
+}
+
+.proprietesContainer .card .supprimer {
+    background-color: var(--secondary-color);
+    top: 1rem;
+    color: var(--white);
+    right: 1rem;
+}
+
+.proprietesContainer .card .archiver {
+    top: 3rem;
+    right: 1rem;
+}
+
+.proprietesContainer .card .infos {
+    gap: .6rem;
+    height: auto;
+    padding-top: .5rem;
+}
+
+.proprietesContainer .card .like {
+    display: flex;
+    gap: .5rem;
+    top: 45%;
+}
+
+.proprietesContainer .card p {
+    color: var(--black);
+    font-size: var(--petite-police);
+    margin: 0;
+    max-height: 60px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-weight: 500;
+}
+
+.proprietes img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .proprietes {
+        padding: 1rem 0 1rem 1rem;
+    }
+    .proprietesContainer {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .proprietes {
+        padding: 0;
+    }
+    .proprietesContainer .card .supprimer {
+        font-size: 12px;
+        padding: .3rem .3rem;
+        font-weight: 600;
+    }
+    .proprietesContainer .card .archiver {
+        font-size: 12px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,87 @@
+.authentification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.authentification h2 {
+    font-weight: 600;
+}
+
+.authentification span {
+    margin-bottom: 1rem;
+}
+
+.authentification .signInputSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0;
+}
+
+.authentification h3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    font-weight: 600;
+    padding: 0 0 0 1rem;
+}
+
+.authentification .selectContainer {
+    padding: 0;
+}
+
+.authentification .selectContainer label {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: var(--police-moyenne);
+}
+
+.authentification .selectContainer input:checked~label {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+@media screen and (max-width: 376px) {
+    .form-container input {
+        padding: .5rem .7rem;
+    }
+    .authentification .selectContainer .selectGroup label {
+        font-size: 13px;
+        padding: .7rem 1rem;
+        font-weight: 600;
+    }
+    .authentification h3 {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 298px) {
+    .authentification span {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .authentification h3 {
+        font-size: .9rem;
+        font-weight: 700;
+        padding: 0;
+    }
+    .authentification .selectContainer .selectGroup label {
+        font-size: 12px;
+        padding: .7rem 1rem;
+        font-weight: 600;
+    }
+    .authentification .selectContainer {
+        gap: .5rem;
+    }
+}

@@ -1,0 +1,39 @@
+.confidentialite {
+    padding: 0rem 0 1rem 0rem;
+    background-color: var(--white);
+}
+
+.confidentialiteContainer p {
+    color: var(--black);
+}
+
+.confidentialiteContainer .item {
+    padding: 2rem 0;
+}
+
+.confidentialiteContainer .item p {
+    margin-bottom: 0;
+}
+
+.confidentialiteContainer .item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.confidentialiteContainer .item:first-child {
+    padding-top: 0;
+}
+
+@media screen and (max-width: 769px) {
+    .confidentialite {
+        padding: 1rem 0 0 1rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .confidentialite {
+        padding: 0;
+    }
+    .confidentialiteContainer .item {
+        padding: 1rem 0;
+    }
+}

@@ -1,0 +1,273 @@
+/* .reservations {
+    padding: 1rem 0 1rem 3rem;
+} */
+
+.reservationCard {
+    height: 130px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    margin: 1rem 0;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.reservationCard ion-icon {
+    margin-right: .6rem;
+    font-size: 1.2rem;
+}
+
+.reservationCard .clientCard,
+.reservationCard .productCard {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.productCard .productImage {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.productCard .productImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: var(--border-color);
+}
+
+.reservations img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.productCard .productInfo {
+    width: calc(100% - 150px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: .5rem;
+    gap: .3rem;
+}
+
+.productCard .productInfo {
+    background-color: var(--border-color);
+}
+
+.reservationContainer .productCard .productInfo .titre {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.reservationContainer .productCard .productInfo .titre,
+.reservationContainer .productCard .productInfo .ville {
+    height: 20px;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+.reservationContainer .productCard .productInfo .prix {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: .1rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.clientCard {
+    padding-left: .5rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.clientCard .client {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+.clientCard .client .clientImage {
+    height: 100%;
+    width: 50px;
+    background-color: var(--border-color);
+    margin-right: .7rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+}
+
+.clientCard .client .photoProfil {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.clientCard .clientContact {
+    display: flex;
+    gap: .5rem;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.clientCard .clientContact a {
+    color: var(--black);
+    border-bottom: 1px solid var(--secondary-text);
+}
+
+.clientCard .clientInfos {
+    width: 100%;
+    height: 65%;
+    padding-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7rem;
+}
+
+.clientCard .clientInfos .dateContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.clientCard .clientInfos .dateContainer .date {
+    padding: .1rem 1rem;
+    background-color: var(--border-color);
+    color: var(--secondary-text);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+    .reservationCard {
+        width: 100%;
+        display: flex;
+        gap: .5rem;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0.5rem;
+        margin: 1rem 0;
+        overflow: hidden;
+    }
+    .reservationCard .clientCard,
+    .reservationCard .productCard {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .productCard .productImage {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        position: relative;
+    }
+    .productCard .productImage img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        background-color: var(--border-color);
+    }
+    .productCard .productInfo {
+        width: 60%;
+        padding: .5rem;
+    }
+    .clientCard .client {
+        align-items: flex-start;
+        padding-left: 0;
+    }
+    .clientCard .client .clientImage {
+        height: 70px;
+        width: 70px;
+    }
+    .clientdetail {
+        display: flex;
+        height: 90px;
+        flex-direction: column;
+    }
+    .clientCard .clientContact {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .clientCard .clientContact span:nth-child(2) {
+        display: none;
+    }
+    .clientCard .clientInfos {
+        padding-top: 0;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+    .clientCard .clientInfos h5 {
+        display: none;
+    }
+    .clientCard .clientInfos .dateContainer {
+        gap: .5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reservationContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+    .reservationContent {
+        width: 100%;
+    }
+    .reservationCard {
+        height: auto;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: center;
+        margin: 0;
+    }
+    .reservationCard .productCard {
+        width: 100%;
+        height: 50%;
+        flex-direction: column;
+    }
+    .productCard .productImage {
+        width: 100%;
+        height: 200px;
+    }
+    .productCard .productInfo {
+        width: 100%;
+    }
+}

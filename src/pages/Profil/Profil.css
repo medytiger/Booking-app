@@ -1,0 +1,256 @@
+.profil {
+    margin: 4rem 0;
+}
+
+.profilContent {
+    margin: 2rem 0;
+}
+
+.profilHead {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profilHead .imagecontainer {
+    height: 150px;
+    width: 150px;
+    position: relative;
+}
+
+.profilHead .imagecontainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+}
+
+.profilHead .imagecontainer .input {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: .9rem;
+    right: .9rem;
+}
+
+.profilHead .imagecontainer input {
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: .55rem;
+    right: -1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    padding-left: 3rem;
+}
+
+.profilHead .imagecontainer ion-icon {
+    border: 1px solid var(--white);
+    position: absolute;
+    bottom: 0rem;
+    right: -.8rem;
+    font-size: 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.profilHead .nomPrenom {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.profilHead .nomPrenom h1 {
+    font-size: 1.5rem;
+}
+
+.profilHead .nomPrenom .numero {
+    color: var(--black);
+    padding: .3rem;
+}
+
+.profilHead .nomPrenom button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: .5rem 1rem;
+    border: none;
+    width: 100%;
+}
+
+.profilHead .nomPrenom .sous-titre {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.profilHead .nomPrenom span {
+    color: var(--text-color);
+}
+
+.profilHead .nomPrenom .identifiant {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    font-size: 13px;
+    padding: .3rem 1rem;
+}
+
+.profilMain {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.profilMain .form {
+    margin-top: 2rem;
+    width: 40%;
+}
+
+.form form {
+    width: 100%;
+}
+
+.form .item input {
+    margin-bottom: .5rem;
+    padding: .5rem 1rem;
+}
+
+.form .updateButton {
+    background-color: var(--secondary-color);
+}
+
+.form button {
+    background-color: var(--black);
+    color: var(--white);
+    padding: .5rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+}
+
+.profilLeftBox {
+    margin-top: 2rem;
+}
+
+.profilLeftBox .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .5rem;
+    padding: 2rem 0;
+}
+
+.profilLeftBox .item input {
+    width: 100%;
+    padding: .5rem 1.5rem;
+}
+
+.profilLeftBox .item .selectContainer label {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 12px;
+}
+
+.profilLeftBox .item .selectContainer input:checked~label {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.profilLeftBox .item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+form .updateFormUser {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: .7rem;
+    border: none;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: var(--petite-police);
+}
+
+.profilContent .profilLeftBox .item {
+    text-transform: uppercase;
+    font-size: var(--police-moyenne);
+    font-weight: 600;
+}
+
+.profilContent .profilLeftBox .checkForm {
+    margin-top: 1rem;
+    background-color: red;
+}
+
+.profilLeftBox .item .email {
+    text-transform: lowercase;
+    font-size: var(--police-moyenne);
+}
+
+.profilRightBox {
+    width: 40%;
+    margin-left: 3rem;
+    padding: 1rem;
+    position: sticky;
+    top: 6rem;
+    border: 1px solid var(--border-color);
+}
+
+.profilRightBox img {
+    width: 100%;
+}
+
+.profilRightBox p {
+    color: var(--black);
+    font-size: var(--petite-police);
+    margin-top: 1rem;
+}
+
+.profilRightBox p:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 426px) {
+    .profilHead {
+        flex-direction: column;
+    }
+    .profilHead .nomPrenom {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .profilMain {
+        flex-direction: column;
+    }
+    .profilMain .form {
+        margin: 0;
+        width: 100%;
+    }
+    .profilRightBox {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: sticky;
+        top: 6rem;
+        border: 0;
+    }
+}

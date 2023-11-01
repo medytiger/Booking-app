@@ -1,0 +1,30 @@
+.localisation {
+    overflow-y: scroll;
+    height: 100%;
+    padding-left: 2rem;
+}
+
+.localisation h2 {
+    font-weight: 600;
+}
+
+.AddressFormContent {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+}
+
+@media screen and (max-width: 769px) {
+    .localisation {
+        height: auto;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .localisation {
+        padding: 0 1rem;
+    }
+}

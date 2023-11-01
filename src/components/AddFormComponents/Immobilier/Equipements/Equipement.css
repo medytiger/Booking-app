@@ -1,0 +1,45 @@
+.equipement {
+    height: 100%;
+    overflow-y: scroll;
+    padding-left: 2rem;
+}
+
+.equipement h2 {
+    font-weight: 600;
+}
+
+.equipement .selectContainer {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0rem 0 2rem 0;
+}
+
+.equipement .selectContainer input {
+    display: none;
+}
+
+.equipement .selectContainer label {
+    padding: 1rem;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: var(--police-moyenne);
+}
+
+.equipement .selectContainer input:checked~label {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+@media screen and (max-width: 426px) {
+    .equipement {
+        padding: 0 1rem;
+    }
+}

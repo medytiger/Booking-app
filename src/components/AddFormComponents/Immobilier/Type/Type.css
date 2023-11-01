@@ -1,0 +1,49 @@
+.typeDePropriete {
+    overflow-y: scroll;
+    height: 100%;
+    padding-left: 2rem;
+}
+
+.typeDePropriete h2 {
+    font-weight: 600;
+}
+
+.typeDePropriete .selectContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    width: 100%;
+    margin: 0rem 0 2rem 0;
+}
+
+.selectContainer input {
+    display: none;
+}
+
+.selectContainer label {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: var(--police-moyenne);
+}
+
+.selectContainer input:checked~label {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.bottomBox {
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 426px) {
+    .typeDePropriete {
+        padding: 0 1rem;
+    }
+}

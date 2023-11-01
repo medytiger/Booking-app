@@ -1,0 +1,793 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 100%;
+    z-index: 999;
+    color: var(--white);
+}
+
+.has-background {
+    backdrop-filter: blur(200px);
+    background-color: #000000df;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.925);
+}
+
+.logo {
+    z-index: 1;
+    width: 33%;
+    height: 100%;
+    padding: .3rem 0;
+}
+
+.logo .logoLink img {
+    height: 100%;
+    width: auto;
+}
+
+.search-zone {
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+    width: 33%;
+}
+
+.search-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: var(--white);
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    /* height: 100%; */
+}
+
+.search input {
+    border: none;
+    padding: 6px 0 6px 1rem;
+    background-color: transparent;
+    color: var(--black);
+    transition: all 0.1s cubic-bezier(.25, -1, .25, 1);
+}
+
+.search input::placeholder {
+    color: var(--white);
+    color: var(--secondary-color);
+}
+
+.optionClear input::placeholder {
+    font-style: italic;
+}
+
+.search .activeInput {
+    position: absolute;
+    right: .15rem;
+    top: 3px;
+    cursor: pointer;
+}
+
+.activeInput ion-icon {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.compte {
+    justify-content: flex-end;
+    gap: 1.5rem;
+    width: 33%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.compte .annonce {
+    color: var(--white);
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    padding: 0 1rem;
+    z-index: 1;
+    height: 100%;
+}
+
+.compte ion-icon {
+    font-size: 1.4rem;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.compte .compteMenu {
+    display: flex;
+    position: relative;
+}
+
+.compte .compteMenu .photoProfilContainer {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--white);
+}
+
+.compte .compteMenu .photoProfil {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.compte .compteMenu .menu {
+    transition: .3s ease-in;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 2.6rem;
+    padding-top: 1rem;
+    right: 0;
+    width: 200px;
+    color: var(--white);
+    backdrop-filter: blur(200px);
+    background-color: #000000df;
+}
+
+.compte .compteMenu .menu.visible {
+    display: flex;
+}
+
+.compte .compteMenu .menu .navAide {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    overflow: hidden;
+    padding-bottom: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.compte .compteMenu .menu .navAide .link {
+    color: var(--black);
+}
+
+.compte .compteMenu .menu.visible::after {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    z-index: -1;
+}
+
+.compte .compteMenu .menu .link {
+    color: var(--white);
+    padding: .5rem 1rem;
+    font-size: var(--petite-police);
+    font-weight: 300;
+}
+
+.compte .compteMenu .menu .link:hover {
+    transition: .3s ease-in;
+    background-color: var(--border-color);
+    color: var(--black);
+}
+
+.searchResult {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    backdrop-filter: blur(100px);
+    z-index: 998;
+    padding: 6rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: scroll;
+}
+
+.searchResult .sectionMain .card-img {
+    border: 0;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.searchResult .sectionMain .nonDisponible {
+    position: absolute;
+    width: 300px;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--background);
+    color: var(--white);
+}
+
+.searchResult .searchClose {
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.searchResult .searchClose button {
+    padding: .5rem;
+    border-radius: 50%;
+    display: flex;
+    border: 0;
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.searchResult .searchClose ion-icon {
+    font-size: 1rem;
+}
+
+.signModal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: transform .6s ease-in-out;
+    background-color: #0000002a;
+    backdrop-filter: blur(10px);
+}
+
+.modalVisible {
+    display: flex;
+}
+
+.modalClose {
+    position: absolute;
+    right: 10rem;
+    top: 6.8rem;
+    padding: .3rem .5rem;
+    border: none;
+    background-color: var(--white);
+}
+
+.modalClose ion-icon {
+    font-size: 1.4rem;
+}
+
+.signModal .globalFormcontainer {
+    height: 550px;
+    width: 900px;
+    background-color: var(--white);
+    padding: 2rem;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s cubic-bezier(.5, -1, .25, 1);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-container form .signInputSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.form-container form .signInputSection ion-icon {
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.sign-up-container form .signInputSection ion-icon {
+    position: absolute;
+    right: 3rem;
+    top: 65%;
+    cursor: pointer;
+}
+
+.social-contiainer {
+    margin: 20px 0;
+}
+
+.social-contiainer a ion-icon {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 23px;
+    width: 23px;
+    padding: .4rem;
+}
+
+form .facebook ion-icon {
+    background-color: #1877f2;
+    color: var(--white);
+}
+
+form .google ion-icon {
+    background-color: #db4437;
+    color: var(--white);
+}
+
+form .linkedin ion-icon {
+    background-color: #0077b5;
+    color: var(--white);
+}
+
+.form-container input {
+    padding: 12px 15px;
+    width: 100%;
+    margin: .5rem;
+}
+
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.sign-up-container form .etape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: calc(100% - 8rem);
+    position: relative;
+    top: -2rem;
+}
+
+.sign-up-container .formControl {
+    width: 100%;
+    height: 50px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: var(--petite-police);
+    position: absolute;
+    bottom: 2rem;
+}
+
+.sign-up-container .formControl .last,
+.sign-up-container .formControl .next,
+.sign-up-container .formControl .registe {
+    position: absolute;
+    margin: 0;
+}
+
+.sign-up-container .formControl .last {
+    left: 3rem;
+    bottom: 0rem;
+    background-color: var(--border-color);
+    display: flex;
+    padding: .5rem;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+}
+
+.sign-up-container .formControl .next {
+    right: 3rem;
+    bottom: 0rem;
+    background-color: var(--border-color);
+    display: flex;
+    padding: .5rem;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+}
+
+.sign-up-container .formControl .last:hover,
+.sign-up-container .formControl .next:hover {
+    background-color: var(--secondary-color);
+}
+
+.sign-up-container .formControl .last:hover ion-icon,
+.sign-up-container .formControl .next:hover ion-icon {
+    color: var(--white);
+}
+
+.sign-up-container .formControl .registe {
+    right: 3rem;
+    bottom: 0;
+}
+
+.sign-up-container .formControl .desabled {
+    display: none;
+}
+
+.form-container .signButton {
+    margin-top: 2rem;
+}
+
+.sign-up-container .formControl ion-icon {
+    color: var(--black);
+}
+
+form .forgotPassword {
+    color: var(--black);
+    cursor: pointer;
+    border-bottom: 1px solid;
+}
+
+form .forgotPassword:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
+    border-bottom: 1px solid;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(.5, -1, .25, 1);
+    z-index: 100;
+}
+
+.overlay {
+    background-color: #ff416c;
+    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s cubic-bezier(.5, -1, .25, 1);
+}
+
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    transform: translateX(0);
+    transition: all 0.6s cubic-bezier(.5, -1, .25, 1);
+    gap: 2rem;
+}
+
+.overlay-panel p {
+    text-align: justify;
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.ghost {
+    color: var(--white);
+}
+
+.globalFormcontainer.activePanel .sign-up-container {
+    transform: translateX(100%);
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+    z-index: 5;
+}
+
+.globalFormcontainer.activePanel .sign-in-container {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.globalFormcontainer.activePanel .overlay-container {
+    transform: translateX(-100%);
+}
+
+.globalFormcontainer.activePanel .overlay {
+    transform: translateX(50%);
+}
+
+.globalFormcontainer.activePanel .overlay-left {
+    transform: translateX(0);
+}
+
+.globalFormcontainer.activePanel .overlay-right {
+    transform: translateX(20%);
+}
+
+@media screen and (max-width: 1025px) {
+    .searchResult {
+        padding: 4rem 3rem;
+        overflow-x: scroll;
+    }
+    .modalClose {
+        position: absolute;
+        right: 5rem;
+        top: 10.55rem;
+        border-radius: 50%;
+        padding: .3rem;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .signModal .globalFormcontainer {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+    }
+    .modalClose {
+        position: absolute;
+        right: .5rem;
+        top: .5rem;
+        border-radius: 50%;
+        padding: .3rem;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-container {
+        position: absolute;
+        top: 0;
+        height: 100%;
+    }
+    .form-container form {
+        padding: 0;
+    }
+    .form-container form .signInputSection {
+        padding: 0 1rem;
+    }
+    .overlay {
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .navbar {
+        width: 100vw;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo {
+        display: none;
+    }
+    .search-zone {
+        flex: 1;
+    }
+    .search-zone input {
+        background-color: var(--border-color);
+    }
+    .compte {
+        width: auto;
+    }
+    .compte .annonce {
+        display: none;
+    }
+    .compte .compteMenu .photoProfilContainer {
+        height: 2rem;
+        width: 2rem;
+    }
+    .compte ion-icon {
+        color: var(--secondary-text);
+    }
+    .has-background .compte ion-icon {
+        color: var(--white)
+    }
+    .searchResult {
+        padding: 6rem 1rem;
+    }
+    .searchResult .sectionMain {
+        gap: 1.5rem 1rem;
+    }
+    .signModal {
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    .signModal .globalFormcontainer {
+        height: 100%;
+        width: 100vw;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .sign-in-container {
+        left: 0;
+        width: 100%;
+        margin-top: 0;
+    }
+    .sign-up-container {
+        left: 0;
+        width: 100%;
+    }
+    .form-container form {
+        margin-top: 4rem;
+        justify-content: flex-start;
+        height: fit-content;
+        padding: 2rem 0;
+    }
+    .form-container form .signInputSection {
+        padding: 0 2rem;
+    }
+    .overlay-container {
+        position: absolute;
+        top: 85%;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        z-index: 100;
+    }
+    .overlay {
+        position: relative;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transform: translateX(0);
+        transition: all 0.6s cubic-bezier(.5, -1, .25, 1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 0;
+    }
+    .overlay-panel {
+        position: absolute;
+        top: 0;
+        padding: 0 40px;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        gap: 1rem;
+        overflow: hidden;
+    }
+    .overlay-panel p {
+        font-size: var(--petite-police);
+        margin: 0;
+    }
+    .overlay-panel h2 {
+        font-size: 16px;
+        font-weight: 800;
+    }
+    .overlay-right {
+        right: 0;
+        transform: translateX(0);
+    }
+    .overlay-left {
+        transform: translateX(-100%);
+    }
+    .globalFormcontainer.activePanel .sign-up-container {
+        transform: translateX(100%);
+        transition: opacity 0.6s ease-in-out;
+        height: 100%;
+        opacity: 1;
+        z-index: 5;
+        top: 0;
+        left: -100%;
+    }
+    .globalFormcontainer.activePanel .sign-in-container {
+        transform: translateX(100%);
+    }
+    .globalFormcontainer.activePanel .overlay-container {
+        transform: translateX(0%);
+    }
+    .globalFormcontainer.activePanel .overlay {
+        transform: translateX(0);
+    }
+    .globalFormcontainer.activePanel .overlay-left {
+        transform: translateX(0);
+    }
+    .globalFormcontainer.activePanel .overlay-right {
+        transform: translateX(100%);
+    }
+    .sign-up-container .formControl {
+        margin-top: 0;
+        bottom: 10rem;
+    }
+    .sign-up-container .formControl .last {
+        left: 2rem;
+    }
+    .sign-up-container .formControl .next,
+    .sign-up-container .formControl .registe {
+        right: 2rem;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .searchResult {
+        padding: 5rem .5rem;
+    }
+    .form-container form .signInputSection {
+        padding: 0 1rem;
+    }
+    .sign-up-container .formControl {
+        margin-top: 0;
+        bottom: 9rem;
+    }
+    .sign-up-container .formControl .last {
+        left: 1rem;
+    }
+    .sign-up-container .formControl .next,
+    .sign-up-container .formControl .registe {
+        right: 1rem;
+    }
+}
+
+@media screen and (max-width: 298px) {
+    .overlay-panel {
+        padding: 1rem;
+    }
+    .overlay-panel p {
+        font-weight: 500;
+        text-align: left;
+    }
+    .sign-in-container span {
+        font-size: 13px;
+        font-weight: 600;
+    }
+}

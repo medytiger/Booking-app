@@ -1,0 +1,89 @@
+.securite {
+    padding: 0rem 0 1rem 0rem;
+}
+
+.securiteContent {
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    position: relative;
+}
+
+.securiteContent .securiteRightBox {
+    width: 100%;
+    position: sticky;
+    top: 6rem;
+}
+
+.securiteContent .securiteRightBox img {
+    height: 200px;
+    width: auto;
+}
+
+.securiteContent h3 {
+    font-weight: 600;
+}
+
+.connexionContainer .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.connexionContainer .item form {
+    width: 100%;
+}
+
+.connexionContainer .item input {
+    margin-bottom: .5rem;
+    padding: .5rem 1rem;
+}
+
+.connexionContainer .item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.connexionContainer .securiteContainer h3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .8rem;
+}
+
+.securiteContainer img {
+    width: 100%;
+}
+
+@media screen and (max-width: 769px) {
+    .securite {
+        padding: 1rem 0 0 1rem;
+    }
+    .securiteContent .securiteRightBox {
+        width: 100%;
+        ;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .securite {
+        padding: 0;
+    }
+    .securiteContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .securiteContent .securiteRightBox {
+        width: 100%;
+        position: relative;
+        top: 0;
+        border: 0;
+        padding: 0;
+    }
+}

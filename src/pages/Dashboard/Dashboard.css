@@ -1,0 +1,245 @@
+.dashboard {
+    margin-top: 6rem;
+    display: flex;
+    text-align: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.dashboardOutletLinkContainer {
+    position: relative;
+    width: 20%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dashboardOutletLink {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+    position: fixed;
+}
+
+.dashboardOutletLink .outfitLink {
+    display: flex;
+    align-items: center;
+    color: var(--black);
+}
+
+.dashboardOutletLink ion-icon {
+    margin-right: .5rem;
+}
+
+.dashboardItem,
+.dashboardOutle {
+    width: 80%;
+    padding-left: 2rem;
+}
+
+.dashboardItem {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.users {
+    width: 100%;
+    background-color: var(--border-color);
+    padding: 1rem;
+}
+
+.homes,
+.cars,
+.carbookings,
+.homeBookings {
+    width: 48%;
+}
+
+.dashboardItem h1,
+.dashboardItem h2 {
+    font-weight: 900;
+}
+
+.headUsercontent {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 1rem;
+}
+
+.usersImg {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.usersImg img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    border: 1px solid;
+    /* Initial position */
+    z-index: 1;
+    /* Initial z-index */
+    transition: all 0.3s ease-in-out;
+    /* Transition effect for smooth movement */
+    /* Additional styles for the first image (index 0) */
+    &:first-child {
+        left: 5px;
+        /* Shifted by 5px */
+        z-index: 10;
+        /* Higher z-index */
+    }
+    /* For the remaining images (index 1 and onwards) */
+    &:nth-child(n + 2) {
+        left: 20px;
+        /* Shifted by 5px */
+        z-index: 9;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 3) {
+        left: 30px;
+        /* Shifted by 5px */
+        z-index: 8;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 4) {
+        left: 40px;
+        /* Shifted by 5px */
+        z-index: 7;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 5) {
+        left: 50px;
+        /* Shifted by 5px */
+        z-index: 6;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 6) {
+        left: 60px;
+        /* Shifted by 5px */
+        z-index: 5;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 7) {
+        left: 70px;
+        /* Shifted by 5px */
+        z-index: 4;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 8) {
+        left: 80px;
+        /* Shifted by 5px */
+        z-index: 3;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 9) {
+        left: 90px;
+        /* Shifted by 5px */
+        z-index: 2;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 10) {
+        left: 100px;
+        /* Shifted by 5px */
+        z-index: 1;
+        /* Lower z-index */
+    }
+}
+
+.homes,
+.homeBookings,
+.cars,
+.carbookings {
+    height: 250px;
+    background-color: var(--border-color);
+    padding: 1rem;
+    color: var(--black);
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 150px;
+}
+
+.images img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    border: 1px solid var(--border-color);
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    /* Transition effect for smooth movement */
+    /* Additional styles for the first image (index 0) */
+    &:first-child {
+        left: 5px;
+        /* Shifted by 5px */
+        z-index: 10;
+        /* Higher z-index */
+    }
+    /* For the remaining images (index 1 and onwards) */
+    &:nth-child(n + 2) {
+        left: 25px;
+        /* Shifted by 5px */
+        z-index: 9;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 3) {
+        left: 45px;
+        /* Shifted by 5px */
+        z-index: 8;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 4) {
+        left: 60px;
+        /* Shifted by 5px */
+        z-index: 7;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 5) {
+        left: 75px;
+        /* Shifted by 5px */
+        z-index: 6;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 5) {
+        left: 90px;
+        /* Shifted by 5px */
+        z-index: 5;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 5) {
+        left: 105px;
+        /* Shifted by 5px */
+        z-index: 4;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 5) {
+        left: 120px;
+        /* Shifted by 5px */
+        z-index: 3;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 5) {
+        left: 135px;
+        /* Shifted by 5px */
+        z-index: 2;
+        /* Lower z-index */
+    }
+    &:nth-child(n + 5) {
+        left: 150px;
+        /* Shifted by 5px */
+        z-index: 1;
+        /* Lower z-index */
+    }
+}

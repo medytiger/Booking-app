@@ -1,0 +1,91 @@
+.annonceContainer {
+    min-height: 50vh;
+    margin-top: 3.1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.annonceHead {
+    height: auto;
+    padding: 1rem;
+}
+
+.annonceHead h1 {
+    font-weight: 900;
+}
+
+.annonceHead p {
+    color: var(--black);
+    margin-top: 1rem;
+}
+
+.annonceBody {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+.annonceLeftBody {
+    width: 60%;
+    padding: 1rem;
+}
+
+.annonceLeftBody form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.annonceLeftBody form h3 {
+    padding-left: 1rem;
+}
+
+.annonceLeftBody form .selectContainerTitre {
+    margin-bottom: 1rem;
+}
+
+.annonceRightBody {
+    flex: 1;
+    height: 400px;
+    position: sticky;
+    top: 6rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.annonceRightBody img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1025px) {
+    .annonceHead {
+        height: auto;
+        padding: 0;
+        box-shadow: none;
+    }
+    .annonceBody {
+        display: flex;
+        gap: 2rem;
+        position: relative;
+        flex-wrap: wrap;
+    }
+    .annonceLeftBody {
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+        order: 2;
+    }
+    .annonceRightBody {
+        position: relative;
+        top: 0;
+        width: 100%;
+        order: 1;
+    }
+}

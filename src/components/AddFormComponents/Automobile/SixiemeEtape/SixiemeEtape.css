@@ -1,0 +1,34 @@
+.sixiemeEtape {
+    height: 100%;
+    padding-left: 2rem;
+}
+
+.sixiemeEtape .selectContainer {
+    margin: 1rem 0 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sixiemeEtape h3 {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.sixiemeEtape .titreTextarea {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 769px) {
+    .sixiemeEtape {
+        height: auto;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .sixiemeEtape {
+        padding: 0 1rem;
+    }
+}

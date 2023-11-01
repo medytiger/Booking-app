@@ -1,0 +1,11 @@
+.separateur {
+    padding: 0 .5rem;
+}
+
+.link {
+    color: var(--black);
+}
+
+.link.active {
+    color: var(--secondary-color);
+}

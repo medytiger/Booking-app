@@ -1,0 +1,7 @@
+.reservation {
+    display: flex;
+    gap: 1rem;
+    background-color: var(--border-color);
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+}

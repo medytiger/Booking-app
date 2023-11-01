@@ -1,0 +1,34 @@
+.filtre {
+    display: flex;
+    gap: 1rem;
+    border: 0;
+    margin-bottom: 2rem;
+}
+
+.home li {
+    display: flex;
+    gap: 1rem;
+    height: 85px;
+    margin: 1rem 0;
+    background-color: var(--border-color);
+    padding: .5rem;
+}
+
+.home li img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+
+.homeInfo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.userInfo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}

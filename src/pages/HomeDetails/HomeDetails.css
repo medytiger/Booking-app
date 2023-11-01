@@ -1,0 +1,834 @@
+.homeDetails {
+    margin-top: 6rem;
+    padding: 0 10rem 2rem 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sousTitre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sousTitre .nombreDeLike ion-icon {
+    color: var(--secondary-color);
+}
+
+.left-box,
+.right-box {
+    display: flex;
+    gap: 2rem;
+}
+
+.left-box a {
+    color: var(--black);
+    border-bottom: 1px solid var(--black);
+}
+
+.productHead span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+}
+
+.note,
+.commentaire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: calc((100% - 0) / 2);
+    gap: 10px;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.productImg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.productImg img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.AllImages {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: var(--white);
+    backdrop-filter: blur(200px);
+    overflow-y: scroll;
+}
+
+.AllImages .productImg {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 20rem;
+    gap: 5rem;
+}
+
+.AllImages .productImg button {
+    border: 0;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    font-weight: var(--police-moyenne);
+    padding: .5rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 5rem;
+    right: 10rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    height: 100%;
+}
+
+.small {
+    height: 200px;
+}
+
+.allImage {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    border: none;
+    padding: .8rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px 0 0 4px;
+}
+
+.productDetail {
+    display: flex;
+    position: relative;
+}
+
+.productDetail .left-box {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.left-box .detailHead {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    position: relative;
+    width: fit-content;
+}
+
+.left-box .detailHead img {
+    height: 50px;
+    width: 50px;
+    background-color: var(--border-color);
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.left-box .detailHead ion-icon {
+    font-size: .9rem;
+    border: 1px solid var(--border-color);
+    position: absolute;
+    left: 2.2rem;
+    bottom: -.5rem;
+    color: #007bff;
+    padding: .3rem;
+    border-radius: 50%;
+}
+
+.left-box .detailHead .userModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0000006e;
+    backdrop-filter: blur(.5rem);
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.left-box .detailHead .userModal .selectedUserCard {
+    height: fit-content;
+    width: 400px;
+    background-color: #ffffffa5;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 20px;
+}
+
+.left-box .detailHead .userModal .button {
+    position: absolute;
+    top: 1.45rem;
+    right: 20%;
+    cursor: pointer;
+}
+
+.left-box .detailHead .userModal .button ion-icon {
+    color: var(--white);
+    background-color: var(--secondary-color);
+    border: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+}
+
+.left-box .detailHead .userModal .selectedUserHead {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.left-box .detailHead .userModal .selectedUserHead .email {
+    text-transform: lowercase;
+}
+
+.left-box .detailHead .userModal .selectedUserHead img {
+    height: 70px;
+    width: 70px;
+    box-shadow: none;
+}
+
+.left-box .detailHead .userModal .selectedUserBody {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.left-box .detailHead .userModal .selectedUserBody p {
+    margin-top: 0;
+    font-weight: 500;
+    color: var(--secondary-text);
+    font-size: 14px;
+    text-align: left;
+}
+
+.left-box .detailHead .userModal .selectedUserBody .identifiant p {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: .3rem 1rem;
+    width: fit-content;
+    border-radius: 1rem;
+}
+
+.left-box .detailHead .userModal .selectedUserFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 50px;
+}
+
+.left-box .detailHead .userModal .selectedUserFooter a {
+    border: 0;
+}
+
+.left-box .detailHead .userModal .selectedUserFooter ion-icon {
+    font-size: .9rem;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.left-box .typePropieteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .7rem;
+    font-weight: 700;
+}
+
+.productDescription {
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productDescription .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .7rem;
+}
+
+.productDescription .mapContainer,
+.productDescription .video {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productDescription .video video {
+    width: 100%;
+}
+
+.productDescription .box p {
+    text-align: justify;
+    color: var(--secondary-text);
+    font-size: 1.1rem;
+    margin-top: .5rem;
+}
+
+.productDescription .box:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.productDescription .box .commodites {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.productDescription .box .commodites .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 1.5rem;
+    gap: .3rem;
+}
+
+.productDetail .right-box {
+    /* width: 40%; */
+    flex: 1;
+    max-height: 610px;
+    position: sticky;
+    top: 6rem;
+    justify-content: flex-end;
+    transition: .4s ease-in-out;
+}
+
+.homeDetails .productDetail .right-box-resize {
+    /* height: 465px; */
+    height: fit-content;
+}
+
+.productDetail .right-box .right-box-item {
+    border: 1px solid var(--border-color);
+    height: fit-content;
+    width: 400px;
+    padding: 1.5rem;
+    transition: .4s ease-in-out;
+}
+
+.productDetail .right-box .right-box-item .contacter {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    padding: 1rem 0 0 0;
+}
+
+.productDetail .right-box .right-box-item a {
+    color: var(--secondary-text);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.productDetail .right-box .right-box-item .WhatsApp {
+    width: fit-content;
+    background-color: #00d833;
+    padding: .3rem 1rem;
+    border-radius: 20px;
+}
+
+.productDetail .right-box .right-box-item .WhatsApp a {
+    border: 0;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.productDetail .right-box .right-box-item form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0 0 0;
+}
+
+.productDetail .right-box .right-box-item form label {
+    background-color: transparent;
+    color: var(--secondary-text);
+}
+
+.productDetail .right-box .right-box-item form .voitures {
+    margin-top: 1.5rem;
+}
+
+.productDetail .right-box .right-box-item form .chauffeur {
+    margin-top: -2rem;
+}
+
+.homeDetails .right-box .right-box-item form .voitureContainer {
+    background-color: transparent;
+    color: var(--secondary-text);
+    width: 110%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    top: -2rem;
+    left: -1.1rem;
+    right: -1rem;
+    overflow-x: scroll;
+}
+
+.homeDetails .right-box .right-box-item form .voiture {
+    background-color: transparent;
+    color: var(--secondary-text);
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.homeDetails .right-box .right-box-item form .voiture img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.homeDetails .right-box .right-box-item form .voiture ion-icon {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    color: var(--white);
+    background-color: #00d833;
+    border-radius: 50%;
+    padding: .1rem;
+    font-size: 1.3rem;
+    border: 1px solid var(--white);
+}
+
+.productDetail .right-box .right-box-item button {
+    width: 100%;
+    color: var(--white);
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border: 2px solid var(--secondary-color);
+    font-size: var(--police-moyenne);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.productDetail .right-box .prixDuree {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.productDetail .right-box .prixDureeNote {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productDetail .right-box .prixDuree span {
+    color: var(--secondary-color);
+}
+
+.productDetail .right-box .prixDuree .duree {
+    color: var(--secondary-color);
+}
+
+.avisEtCommentaire {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.avisContainer {
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    /* height: 170px; */
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+}
+
+.avisContainer::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    background: linear-gradient(to right, transparent, white);
+}
+
+.avisContainer .avis {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 350px;
+}
+
+.avisContainer .avisHead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.avisContainer .avisHead button {
+    position: absolute;
+    right: 0;
+    padding: .15rem .5rem;
+    border: 0;
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.avisContainer .avisHead img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    background-color: var(--border-color);
+}
+
+.avisContainer .avisHead .nomEtDate {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.avisContainer .avisHead .nomEtDate span {
+    font-size: var(--petite-police);
+    color: var(--secondary-color);
+}
+
+.avisContainer .aviscontent {
+    width: 300px;
+    max-height: 60px;
+    margin-top: .5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.commentaireForme form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.autre {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem 1rem;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 1025px) {
+    .productDetail {
+        display: flex;
+        position: relative;
+        gap: 2rem;
+    }
+    .homeDetails {
+        margin-top: 4rem;
+        padding: 0 3rem 2rem 3rem;
+        display: flex;
+    }
+    .productDetail .left-box {
+        width: 65%;
+        gap: 1rem;
+    }
+    .productDetail .right-box {
+        /* width: 40%; */
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .homeDetails {
+        margin-top: 4rem;
+        padding: 0 2rem 2rem 2rem;
+        display: flex;
+    }
+    .sousTitre {
+        color: var(--black);
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .grid-container {
+        height: 300px;
+        place-items: center;
+        align-items: center;
+        align-content: center
+    }
+    .AllImages .productImg button {
+        top: 1rem;
+        right: 1rem;
+    }
+    .AllImages .productImg {
+        padding: 4rem;
+        gap: 4rem;
+    }
+    .productDetail {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    .productDetail .left-box {
+        width: 100%;
+        gap: 1rem;
+    }
+    .left-box .detailHead img {
+        height: 30px;
+        width: 30px;
+    }
+    .homeDetails .left-box .detailHead ion-icon {
+        font-size: .8rem;
+        position: absolute;
+        left: 1.1rem;
+        bottom: -0.5rem;
+        padding: 0.1rem;
+    }
+    .left-box .typePropieteContainer {
+        font-size: .8rem;
+        font-weight: 800;
+    }
+    .productDetail .right-box {
+        width: 100%;
+        height: auto;
+        max-height: 200vh;
+        position: relative;
+        flex: none;
+        position: relative;
+        top: 0;
+    }
+    .productDetail .right-box .right-box-item {
+        border: 1px solid var(--border-color);
+        width: 100%;
+        padding: 1.5rem;
+        transition: .4s ease-in-out;
+    }
+    .autre {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .homeDetails {
+        padding: 0 1rem 2rem 1rem;
+    }
+    .sousTitre .left-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+        width: 100%;
+    }
+    .left-box .detailHead .userModal .selectedUserCard {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+    .left-box .detailHead .userModal .button {
+        top: 1rem;
+        right: 5%;
+    }
+    .left-box .detailHead .userModal .selectedUserFooter ion-icon {
+        font-size: 1.2rem;
+    }
+    .sousTitre .right-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+        width: 100%;
+    }
+    .productDetail .right-box .right-box-item {
+        padding: 1.5rem 1rem;
+    }
+    .sousTitre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid-container {
+        height: 300px;
+        width: auto;
+        display: flex !important;
+        border-radius: 0;
+        position: relative;
+    }
+    .grid-container .productImg {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        position: absolute;
+    }
+    .allImage {
+        bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        cursor: pointer;
+        border: none;
+        padding: .8rem;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 5px 0 0 4px;
+    }
+    .AllImages .productImg button {
+        top: 1rem;
+        right: 1rem;
+    }
+    .AllImages .productImg {
+        padding: 4rem 0;
+        gap: 1rem;
+    }
+    .AllImages .AllImagesConetent {
+        height: 400px;
+        width: 100vw;
+        padding: 1rem;
+        gap: 3rem;
+    }
+    .small {
+        display: none;
+    }
+    .productDescription .video {
+        padding: 0;
+        height: auto;
+    }
+    .autre {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        margin-top: 1rem;
+    }
+    .avisContainer {
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-height: 500px;
+        overflow: inherit;
+        padding: 0;
+        position: relative;
+    }
+    .avisContainer .avis {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .avisContainer .avisHead button {
+        font-size: 10px;
+        font-weight: 700;
+        top: -.5rem;
+    }
+    .avisContainer .aviscontent {
+        width: 100%;
+        max-height: 60px;
+        margin-top: .5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* white-space: nowrap; */
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .avisContainer::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 10%;
+        width: 100%;
+        background: linear-gradient(to bottom, transparent, white);
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .left-box .detailHead .userModal .selectedUserFooter ion-icon {
+        font-size: 1rem;
+    }
+    .homeDetails {
+        padding: 0 .5rem 1rem .5rem;
+    }
+    .sousTitre {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .grid-container {
+        height: 250px;
+    }
+}

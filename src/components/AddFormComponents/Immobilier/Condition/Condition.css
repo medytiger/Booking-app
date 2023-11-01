@@ -1,0 +1,62 @@
+.condition {
+    height: 100%;
+    padding-left: 2rem;
+}
+
+.condition h2 {
+    font-weight: 600;
+}
+
+.condition input {
+    margin-top: 2rem;
+}
+
+.selectContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.selectContainer .selectGroup input {
+    display: none;
+}
+
+.selectContainer .selectGroup label {
+    padding: 1rem;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: var(--police-moyenne);
+}
+
+.selectContainer .selectGroup input:checked~label {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.condition textarea {
+    resize: none;
+}
+
+@media screen and (max-width: 769px) {
+    .condition {
+        height: auto;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+    }
+    .condition .selectContainer {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .condition {
+        padding: 0 1rem;
+    }
+}

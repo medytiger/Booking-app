@@ -1,0 +1,36 @@
+.aide {
+    padding: 0rem 0 1rem 0rem;
+    background-color: var(--white);
+}
+
+.aide p {
+    color: var(--black);
+    margin-bottom: 0;
+}
+
+.aide .item {
+    padding: 2rem 0;
+}
+
+.aide .item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.aide .item:first-child {
+    padding-top: 0;
+}
+
+@media screen and (max-width: 769px) {
+    .aide {
+        padding: 1rem 0 0 1rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .aide {
+        padding: 0;
+    }
+    .aide .item {
+        padding: 1rem 0;
+    }
+}

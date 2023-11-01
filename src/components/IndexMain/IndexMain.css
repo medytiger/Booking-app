@@ -1,0 +1,241 @@
+.indexMain {
+    position: relative;
+}
+
+.indexMain::before {
+    content: '';
+    position: absolute;
+    top: -198px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 99%);
+}
+
+.container-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.index-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    height: 100px;
+}
+
+.index-menu .selectContainer .selectGroup label {
+    padding: 0 1rem;
+    padding: .4rem 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.IndexFiltre {
+    border: 1px solid var(--border-color);
+    padding: .4rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: var(--white);
+}
+
+.rangeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    padding: 0 0 0 1rem;
+    position: relative;
+}
+
+.rangeContainer .range {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 20px;
+    width: 400px;
+    position: relative;
+}
+
+.rangeContainer .range span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.rangeContainer .tonBudget {
+    position: absolute;
+    left: 24%;
+    top: -1.6rem;
+    width: 40%;
+    height: 1.5rem;
+    border: 1px solid var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10rem);
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.rangeContainer .budgetVisible {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.rangeContainer input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    padding: 0;
+}
+
+.rangeContainer input[type="range"]:hover {
+    opacity: 1;
+}
+
+.rangeContainer input[type="range"]:focus {
+    outline: 0;
+    border: 0;
+}
+
+.rangeContainer input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    position: relative;
+}
+
+.indexFilter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    padding: .3rem .7rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    cursor: pointer;
+    position: relative;
+}
+
+.indexFilter::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, #ffffff00 20%, #8f8f8f46 100%);
+    height: 100%;
+    width: calc(100vw - 20.5rem);
+    z-index: -1;
+    right: 0;
+    border-radius: 20px;
+}
+
+.indexFilter span {
+    font-size: 1.2rem;
+}
+
+.indexFilter ion-icon {
+    font-size: 1.2rem;
+}
+
+.sectionMain {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem 1rem;
+}
+
+
+/* @media screen and (max-width: 1024px)  */
+
+@media screen and (max-width: 1025px) {
+    .container-menu {
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+
+/* @media screen and (max-width: 1024px)  */
+
+@media screen and (max-width: 769px) {
+    .indexMain::before {
+        top: -148px;
+        left: 0;
+        right: 0;
+        height: 150px;
+    }
+    .container-menu {
+        padding: 1rem;
+    }
+    .index-menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+    .index-menu .selectContainer {
+        margin: 1rem 0 0 0;
+    }
+    .indexFilter {
+        display: none;
+    }
+    .sectionMain {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .header .container {
+        margin-bottom: 2rem;
+    }
+    .indexMain::before {
+        top: -148px;
+        left: 0;
+        right: 0;
+        height: 150px;
+    }
+    .IndexFiltre {
+        display: none;
+    }
+    .container-menu {
+        padding: 1rem;
+        height: 80px;
+    }
+    .index-menu {
+        justify-content: center;
+    }
+    .sectionMain {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .sectionMain {
+        margin-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width: 315px) {
+    .sectionMain {
+        margin-bottom: 3rem;
+    }
+}

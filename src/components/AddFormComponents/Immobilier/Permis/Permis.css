@@ -1,0 +1,40 @@
+    .permis {
+        overflow-y: scroll;
+        height: 100%;
+        padding-left: 2rem;
+    }
+    
+    .permis .selectContainer {
+        margin: 1rem 0 2rem 0;
+    }
+    
+    .permis h2 {
+        font-weight: 600;
+    }
+    
+    .textareaGroup {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .textareaGroup span {
+        margin-bottom: 1rem;
+    }
+    
+    textarea {
+        resize: none;
+    }
+    
+    @media screen and (max-width: 769px) {
+        .permis {
+            height: auto;
+            padding: 0 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .permis {
+            padding: 0 1rem;
+        }
+    }

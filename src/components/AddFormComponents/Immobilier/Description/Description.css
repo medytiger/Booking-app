@@ -1,0 +1,36 @@
+.description {
+    height: 100%;
+    padding-left: 2rem;
+}
+
+.description h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.description textarea {
+    margin-top: 2rem;
+    padding: 1rem;
+    resize: none;
+    max-height: none;
+    width: 100%;
+    overflow-y: scroll;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+@media screen and (max-width: 769px) {
+    .description {
+        height: auto;
+        padding: 0 2rem;
+    }
+    .description textarea {
+        margin: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .description {
+        padding: 0 1rem;
+    }
+}

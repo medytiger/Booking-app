@@ -1,0 +1,30 @@
+.cinquiemeEtape {
+    height: 100%;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    overflow-y: scroll;
+}
+
+.cinquiemeEtape .selectContainer {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cinquiemeEtape h3 {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 769px) {
+    .cinquiemeEtape {
+        height: auto;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .cinquiemeEtape {
+        padding: 0 1rem;
+    }
+}

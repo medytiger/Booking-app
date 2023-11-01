@@ -1,0 +1,31 @@
+.infosPersonel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.infosPersonel h3 {
+    padding-left: 1rem;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 376px) {
+    .infosPersonel h3 {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 298px) {
+    .infosPersonel h3 {
+        font-size: .9rem;
+        font-weight: 700;
+    }
+}
