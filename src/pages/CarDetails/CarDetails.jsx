@@ -296,7 +296,7 @@ export default function CarDetails() {
                         variants={containerVariants}
                         transition={{ staggerChildren: 0.5 }}
                     >
-                        <motion.h1> {carDetails.marque}  {carDetails.modele} {carDetails.annee} {carDetails.typePlacement !== 'en vente' && (<> {carDetails.typePlacement} </>)} </motion.h1>
+                        <motion.h1> {carDetails.marque}  {carDetails.modele} {carDetails.annee} - {carDetails.typePlacement} </motion.h1>
                         <motion.div className="sousTitre"
                             initial='offscreen'
                             animate='onscreen'

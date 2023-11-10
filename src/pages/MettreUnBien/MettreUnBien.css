@@ -1,0 +1,56 @@
+.MettreUnBien {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.MettreUnBienContainer {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.MettreUnBienContainer h1 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.MettreUnBienContainer h2,
+.MettreUnBienContainer h3,
+.MettreUnBienContainer h4 {
+    margin-bottom: 1rem;
+}
+
+.MettreUnBienContainer p {
+    color: var(--black);
+    font-size: var(--petite-police);
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.MettreUnBienContainer .item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.MettreUnBienContainer .item:last-child {
+    border-bottom: 0;
+}
+
+@media screen and (max-width: 1025px) {
+    .MettreUnBienContainer {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 469px) {
+    .MettreUnBienContainer {
+        width: 100%;
+    }
+}

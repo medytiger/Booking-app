@@ -277,7 +277,7 @@ export default function HomeDetails() {
                         transition={{ staggerChildren: 0.5 }}
                     >
 
-                        <motion.h1> {homeDetails.titre} </motion.h1>
+                        <motion.h1> {homeDetails.titre} - {homeDetails.typePlacement} </motion.h1>
 
                         <motion.div className="sousTitre"
                             initial='offscreen'
@@ -552,8 +552,14 @@ export default function HomeDetails() {
                                     </motion.div>
                                 ))}
 
-                                {homeDetails.standing && (<h4>`- {homeDetails.standing}` </h4>)}
+                                {homeDetails.standing && (<h4>- {homeDetails.standing}</h4>)}
 
+                                {homeDetails.permis && homeDetails.permis == "ACD" && (<h4>- Arrêté de Concession Définitive ({homeDetails.permis})</h4>)}
+                                {homeDetails.permis && homeDetails.permis == "CMPF" && (<h4>- Certificat de Mutation de Propriété Foncière ({homeDetails.permis})</h4>)}
+                                {homeDetails.permis && homeDetails.permis == "CPF" && (<h4>- Certificat de Propriété Foncière ({homeDetails.permis})</h4>)}
+                                {homeDetails.permis && homeDetails.permis == "CF" && (<h4>- Certificat Foncier ({homeDetails.permis})</h4>)}
+                                {homeDetails.permis && homeDetails.permis == "APFR" && (<h4>- Arrêté de Propriété Foncière Rurale ({homeDetails.permis})</h4>)}
+                                {homeDetails.permis && homeDetails.permis == "Attestation villageoise" && (<h4>- {homeDetails.permis}</h4>)}
 
                             </motion.div>
 

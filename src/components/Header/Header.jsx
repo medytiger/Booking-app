@@ -46,7 +46,7 @@ export default function Header() {
                             transition={{ staggerChildren: 0.5 }}
                         >
                             <motion.p className='email card-raduis'><a href={`mailto:${EMAIL}`} className='card-raduis'><ion-icon name="mail-outline"></ion-icon>{EMAIL}</a></motion.p>
-                            <motion.p className='numeros'><span className='numero card-raduis'><ion-icon name="call-outline"></ion-icon>{ORANGE}</span>  <span className='numero card-raduis'><ion-icon name="call-outline"></ion-icon>{MTN}</span></motion.p>
+                            <motion.p className='numeros'><span className='numero card-raduis'><ion-icon name="call-outline"></ion-icon>+{ORANGE}</span>  <span className='numero card-raduis'><ion-icon name="call-outline"></ion-icon>+{MTN}</span></motion.p>
                         </motion.span>
                         <motion.span className='secondary-right-box'
                             initial='offscreen'
