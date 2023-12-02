@@ -295,6 +295,10 @@ export default function Compte() {
         setResizeMenu(!resizeMenu);
     };
 
+    const isLinkActive = (link) => {
+        return link === location.pathname ? 'activeLink' : '';
+    };
+
 
     return (
         <>
@@ -350,7 +354,6 @@ export default function Compte() {
                                             <> {user.email} </>
                                         )}
                                     </motion.span>
-                                    <Link className='link' to='/profil'>Aller au profil</Link >
                                 </motion.div>
                             </motion.div>
 
@@ -374,14 +377,14 @@ export default function Compte() {
                                 transition={{ staggerChildren: 0.5 }}
                             >
                                 <motion.span className='sideOutletMenu' onClick={() => showMenuLink()}>MENU {resizeMenu ? <ion-icon name="close-outline"></ion-icon> : <ion-icon name="menu-outline"></ion-icon>} </motion.span>
-                                <Link to="/compte" className='outfitLink' onClick={() => showMenuLink()}><ion-icon name="person-outline"></ion-icon>Compte</Link>
-                                <Link to="/compte/proprietes" className='outfitLink' onClick={() => showMenuLink()}><ion-icon name="storefront-outline"></ion-icon>Mes Propriétés</Link>
-                                <Link to="/compte/reservations" className='outfitLink' onClick={() => showMenuLink()}><ion-icon name="bookmarks-outline"></ion-icon>Réservations</Link>
-                                <Link to="/compte/securite" className='outfitLink' onClick={() => showMenuLink()}><ion-icon name="key-outline"></ion-icon>Connexion et Sécurité</Link>
-                                <Link to="/compte/facturation" className='outfitLink' onClick={() => showMenuLink()}><ion-icon name="card-outline"></ion-icon>Facturation et payement</Link>
-                                <Link to="/compte/notification" className='outfitLink' onClick={() => showMenuLink()}> <ion-icon name="alert-circle-outline"></ion-icon>Notification</Link>
-                                <Link to="/compte/confidentialite" className='outfitLink' onClick={() => showMenuLink()}><ion-icon name="eye-off-outline"></ion-icon>Confidentialité</Link>
-                                <Link to="/compte/aide" className='outfitLink' onClick={() => showMenuLink()}><ion-icon name="help-outline"></ion-icon>Aide</Link>
+                                <Link to="/compte" className={`outfitLink ${isLinkActive('/compte')}`} onClick={() => showMenuLink()}><ion-icon name="person-outline"></ion-icon>Compte</Link>
+                                <Link to="/compte/proprietes" className={`outfitLink ${isLinkActive('/compte/proprietes')}`} onClick={() => showMenuLink()}><ion-icon name="storefront-outline"></ion-icon>Mes Propriétés</Link>
+                                <Link to="/compte/reservations" className={`outfitLink ${isLinkActive('/compte/reservations')}`} onClick={() => showMenuLink()}><ion-icon name="bookmarks-outline"></ion-icon>Réservations</Link>
+                                <Link to="/compte/securite" className={`outfitLink ${isLinkActive('/compte/securite')}`} onClick={() => showMenuLink()}><ion-icon name="key-outline"></ion-icon>Connexion et Sécurité</Link>
+                                <Link to="/compte/facturation" className={`outfitLink ${isLinkActive('/compte/facturation')}`} onClick={() => showMenuLink()}><ion-icon name="card-outline"></ion-icon>Facturation et payement</Link>
+                                <Link to="/compte/notification" className={`outfitLink ${isLinkActive('/compte/notification')}`} onClick={() => showMenuLink()}> <ion-icon name="alert-circle-outline"></ion-icon>Notification</Link>
+                                <Link to="/compte/confidentialite" className={`outfitLink ${isLinkActive('/compte/confidentialite')}`} onClick={() => showMenuLink()}><ion-icon name="eye-off-outline"></ion-icon>Confidentialité</Link>
+                                <Link to="/compte/aide" className={`outfitLink ${isLinkActive('/compte/aide')}`} onClick={() => showMenuLink()}><ion-icon name="help-outline"></ion-icon>Aide</Link>
                                 <motion.button className='supprimer card-raduis' onClick={handleDelete}>Supprimer le compte</motion.button>
                             </motion.div>
 

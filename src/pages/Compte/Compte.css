@@ -241,11 +241,6 @@
     max-height: 23px;
 }
 
-.userInfos .link {
-    color: var(--secondary-color);
-    margin: .5rem 0;
-}
-
 .compteMain {
     flex: 1;
     margin-top: 1rem;
@@ -401,6 +396,19 @@
     display: flex;
     align-items: center;
     gap: .5rem;
+    position: relative;
+}
+
+.sideOutlet .activeLink::after {
+    position: absolute;
+    left: -1.15rem;
+    height: 100%;
+    width: 6px;
+    display: block;
+    background-color: var(--secondary-color);
+    content: '';
+    border-radius: 2px;
+    transition: var(--transition);
 }
 
 .add {

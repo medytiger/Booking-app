@@ -4,6 +4,11 @@ import './ConditionsGenerales.css'
 import Footer from '../../../components/Footer/Footer'
 import { motion } from 'framer-motion'
 import Navbar from '../../../components/Navbar/Navbar';
+import {
+    MTN,
+    EMAIL_SUPPORT,
+    NUMERO_SUPPORT
+} from '../../../App'
 
 
 export default function ConditionsGenerales() {
@@ -207,7 +212,7 @@ export default function ConditionsGenerales() {
                         transition={{ staggerChildren: 0.5 }}
                     >
                         <motion.p>
-                            En utilisant Nomade, vous acceptez ces conditions générales dans leur intégralité. Si vous avez des questions ou des préoccupations, veuillez nous contacter à [adresse e-mail de contact]. Merci de faire partie de la communauté Nomade !
+                            En utilisant Nomade, vous acceptez ces conditions générales dans leur intégralité. Si vous avez des questions ou des préoccupations, veuillez nous contacter à {EMAIL_SUPPORT}. Merci de faire partie de la communauté Nomade !
                         </motion.p>
                     </motion.div>
 

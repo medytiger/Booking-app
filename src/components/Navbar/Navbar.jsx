@@ -223,9 +223,14 @@ export default function Navbar() {
                                     Authentification
                                 </Link>
                             ) : (
-                                <Link to={'/compte'} onClick={showMenu} className='link'>
-                                    Compte
-                                </Link>
+                                <>
+                                    <Link to={'/profil'} onClick={showMenu} className='link'>
+                                        Profil
+                                    </Link>
+                                    <Link to={'/compte'} onClick={showMenu} className='link'>
+                                        Compte
+                                    </Link>
+                                </>
                             )}
 
                             <Link to='/about' className='link' onClick={showMenu}>A propos</Link>
@@ -410,13 +415,7 @@ export default function Navbar() {
             )}
 
 
-            <motion.div className={`signModal  ${isModalVisible ? "modalVisible" : ""}`}
-                initial='offscreen'
-                whileInView='onscreen'
-                viewport={{ once: true, amount: 0.2 }}
-                variants={containerVariants}
-                transition={{ staggerChildren: 0.5 }}
-            >
+            <div className={`signModal  ${isModalVisible ? "modalVisible" : ""}`}>
 
                 <motion.button className='modalClose btn-raduis' onClick={showModal}>
                     <ion-icon name="close-outline"></ion-icon>
@@ -497,7 +496,7 @@ export default function Navbar() {
 
                 </motion.div>
 
-            </motion.div>
+            </div>
 
         </>
     )
